@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor Product Card</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="product-card">
+
+        <div class="save-badge">
+            Save: 7,000৳
+        </div>
+
+        <img
+            class="product-image"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBcCZ1nF4IIBND7PPdVaSCaNbSZTVdOm1xy2ed-MNI_A&s=10"
+            alt="Computer Monitor"
+        >
+
+        <h2 class="product-title">
+            full HD smart led tvs 21.5"
+        </h2>
+
+        <ul class="product-details">
+            <li>Resolution: fd (1920 x 1080)</li>
+            <li>Display: 21.5 Inch IPS, 100Hz</li>
+            <li>Ports: 1x HDMI, 1x VGA</li>
+            <li>Features: Low Blue Light, VESA Mount</li>
+        </ul>
+
+        <div class="price-section">
+            <span class="current-price">48,000৳</span>
+            <span class="old-price">55,000৳</span>
+        </div>
+
+        <button class="buy-btn" onclick="buyNow()">
+            Buy Now
+        </button>
+
+        <button class="compare-btn" onclick="compareProduct()">
+            ▣ Add to Compare
+        </button>
+
+    </div>
+
+    <script>
+        function buyNow() {
+            alert("You clicked Buy Now!");
+        }
+
+        function compareProduct() {
+            const button = document.querySelector(".compare-btn");
+
+            if (button.innerText.includes("Add")) {
+                button.innerText = "✓ Added to Compare";
+            } else {
+                button.innerText = "▣ Add to Compare";
+            }
+        }
+    </script>
+
+</body>
+</html>
